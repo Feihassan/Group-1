@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import ListingPage from './components/ListingPage';
 import AddApartmentForm from './components/AddApartmentForm';
+import './index.css';
 
 function App() {
   const [apartments, setApartments] = useState([]);
