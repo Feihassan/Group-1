@@ -5,6 +5,7 @@ import Home from './components/Home';
 import ListingPage from './components/ListingPage';
 import AddApartmentForm from './components/AddApartmentForm';
 
+
 function App() {
   const [apartments, setApartments] = useState([]);
 
