@@ -4,6 +4,7 @@ function ListingPage() {
   return (
     <div>
       <h2>All Apartments</h2>
+      
     </div>
   );
 }
