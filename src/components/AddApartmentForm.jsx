@@ -100,7 +100,7 @@ function AddApartmentForm() {
       </label>
       <br />
 
-      <button type="submit">Add Apartment</button>
+      <button type="submit">Add Apartments</button>
     </form>
   );
 }
