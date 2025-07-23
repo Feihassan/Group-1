@@ -1,9 +1,13 @@
-import React from 'react'
+import { Link } from "react-router";
 
-function NavBar() {
+ function NavBar(){
+
   return (
-    <div>NavBar</div>
+    <nav>
+      <h1>Dream ApartMent Finder</h1>
+    </nav>
   )
-}
 
-export default NavBar
+ }
+
+ export default NavBar;
