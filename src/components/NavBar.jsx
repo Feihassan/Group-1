@@ -5,6 +5,11 @@ import { Link } from "react-router";
   return (
     <nav>
       <h1>Dream ApartMent Finder</h1>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </nav>
   )
 
