@@ -1,16 +1,18 @@
-import React from "react";
-
-function ListingPage() {
-  return (
-    <div>
-      <h2>All Apartments</h2>
-    </div>
-  );
-}
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function ListingPage() {
   const [apartments, setApartments] = useState([]);
+
+  useEffect(() => {
+    getApartments();
+  }, []);
+
+  function getApartments() {
+    fetch("http://localhost:3001/apartments")
+      .then((res) => res.json())
+      .then((data) => setApartments(data))
+      .catch((err) => console.log("Failed to fetch apartments:", err));
+  }
 
   return (
     <div>
@@ -26,6 +28,3 @@ function ListingPage() {
 }
 
 export default ListingPage;
-
-
-
