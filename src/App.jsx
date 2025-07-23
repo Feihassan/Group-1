@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import ListingPage from './components/ListingPage';
+import AddApartmentForm from './components/AddApartmentForm';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [apartments, setApartments] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/apartments')
+      .then(res => res.json())
+      .then(data => setApartments(data));
+  }, []);
+
+  function addApartment(newApartment) {
+    setApartments([...apartments, newApartment]);
+  }
+
+  function handleBook(id) {
+    setApartments(prev =>
+      prev.map(apartment =>
+        apartment.id === id ? { ...apartment, booked: true } : apartment
+      )
+    );
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/listings"
+          element={<ListingPage apartments={apartments} onBook={handleBook} />}
+        />
+        <Route
+          path="/add"
+          element={<AddApartmentForm onAddApartment={addApartment} />}
+        />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
