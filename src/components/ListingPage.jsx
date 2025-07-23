@@ -7,7 +7,7 @@ function ListingPage({ apartments, onBook }) {
         <ApartmentCard
           key={apartment.id}
           apartment={apartment}
-          onBook={onBook}
+          onBook={onBook2}
         />
       ))}
     </div>
