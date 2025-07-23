@@ -1,9 +1,7 @@
-import React from 'react'
+import { Link } from "react-router";
 
-function NavBar() {
-  return (
-    <div>NavBar edit</div>
-  )
-}
+ function NavBar(){
 
-export default NavBar
+ }
+
+ export default NavBar;
