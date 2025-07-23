@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function AddApartmentForm() {
   return (
-    <div>AddApartmentForm</div>
-  )
+    <form>
+      <h2>Add New Apartments</h2>
+    </form>
+  );
 }
 
-export default AddApartmentForm
+export default AddApartmentForm;
