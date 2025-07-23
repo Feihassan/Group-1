@@ -3,7 +3,7 @@ import React from "react";
 function ListingPage() {
   return (
     <div>
-      <h2>All Apartments</h2>
+      <h2>All Apartment</h2>
     </div>
   );
 }
