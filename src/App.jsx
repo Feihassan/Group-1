@@ -9,6 +9,7 @@ function App() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
+
     fetch('http://localhost:3001/apartments')
       .then(res => res.json())
       .then(data => setApartments(data));
