@@ -7,8 +7,8 @@ import { Link } from "react-router";
       <h1>Dream ApartMent Finder</h1>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/listing">Listing</Link></li>
-        <li><Link to={"/ add-apartment"}>Add Apartment</Link></li>
+        <li><Link to="/listings">Listing</Link></li>
+        <li><Link to="/ add">Add Apartment</Link></li>
       </ul>
     </nav>
   )
