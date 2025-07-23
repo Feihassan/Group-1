@@ -5,12 +5,12 @@ import Home from './components/Home';
 import ListingPage from './components/ListingPage';
 import AddApartmentForm from './components/AddApartmentForm';
 
-
 function App() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/apartments')
+
+    fetch('http://localhost:3001/apartments')
       .then(res => res.json())
       .then(data => setApartments(data));
   }, []);
