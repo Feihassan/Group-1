@@ -92,7 +92,7 @@ function AddApartmentForm() {
       <label>
         Description:
         <textarea
-          name="description"
+          name="descriptions"
           value={formData.description}
           onChange={handleChange}
           required
