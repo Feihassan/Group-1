@@ -1,15 +1,9 @@
-import ApartmentCard from "./ApartmentCard";
+import React from "react";
 
-function ListingPage({ apartments, onBook }) {
+function ListingPage() {
   return (
-    <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {apartments.map(apartment => (
-        <ApartmentCard
-          key={apartment.id}
-          apartment={apartment}
-          onBook={onBook2}
-        />
-      ))}
+    <div>
+      <h2>All Apartments</h2>
     </div>
   );
 }
