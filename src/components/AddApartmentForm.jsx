@@ -14,9 +14,33 @@ function AddApartmentForm() {
     setFormData({ ...formData, [name]: value });
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newApartment = {
+      ...formData,
+      price: parseInt(formData.price, 10),
+      booked: false
+    };
+
+    fetch("http://localhost:3001/apartments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newApartment)
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Added:", data);
+        // You can clear the form or navigate later
+      })
+      .catch((err) => console.error("Error adding apartment:", err));
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2>Add New Apartment</h2>
+
+      {/* same inputs as Step 2 */}
 
       <label>
         Title:
