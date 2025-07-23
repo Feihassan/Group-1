@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
 
-function Home() {
-  return (
-    <div>Home</div>
-  )
-}
-
-export default Home
-=======
 function Home(){
 
   return (
@@ -31,4 +21,4 @@ function Home(){
 }
 
 export default Home;
->>>>>>> 8b30fd3 (add new changes)
+
