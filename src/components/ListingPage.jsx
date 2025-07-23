@@ -33,11 +33,11 @@ function ListingPage() {
       </h2>
       <div className="flex flex-wrap justify-center gap-6">
         {apartments.map((apt) => (
-          <ApartmentCard key={apt.id} apartment={apt} onBook={handleBook} />
+          <ApartmentCards key={apt.id} apartment={apt} onBook={handleBook} />
         ))}
       </div>
     </div>
   );
-}
+} 
 
 export default ListingPage;
