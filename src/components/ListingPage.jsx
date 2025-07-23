@@ -27,9 +27,11 @@ function ListingPage() {
   }
 
   return (
-    <div>
-      <h2>All Apartments</h2>
-      <div className="flex flex-wrap gap-4">
+    <div className="max-w-7xl mx-auto p-6">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        All Apartments
+      </h2>
+      <div className="flex flex-wrap justify-center gap-6">
         {apartments.map((apt) => (
           <ApartmentCard key={apt.id} apartment={apt} onBook={handleBook} />
         ))}
