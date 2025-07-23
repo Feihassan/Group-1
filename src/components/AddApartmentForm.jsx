@@ -26,7 +26,7 @@ function AddApartmentForm() {
       booked: false
     };
 
-    fetch("http://localhost:3001/apartments", {
+    fetch("http://localhost:3000/apartments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newApartment)
@@ -100,7 +100,7 @@ function AddApartmentForm() {
       </label>
       <br />
 
-      <button type="submit">Add Apartment</button>
+      <button type="submit">Add Apartments</button>
     </form>
   );
 }
