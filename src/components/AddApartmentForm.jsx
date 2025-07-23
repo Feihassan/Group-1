@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddApartmentForm() {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ function AddApartmentForm() {
     image: "",
     description: ""
   });
+
+  const navigate = useNavigate();
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -29,9 +32,8 @@ function AddApartmentForm() {
       body: JSON.stringify(newApartment)
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log("Added:", data);
-        // You can clear the form or navigate later
+      .then(() => {
+        navigate("/listings");
       })
       .catch((err) => console.error("Error adding apartment:", err));
   }
@@ -40,7 +42,7 @@ function AddApartmentForm() {
     <form onSubmit={handleSubmit}>
       <h2>Add New Apartment</h2>
 
-      {/* same inputs as Step 2 */}
+      {/* same inputs as previous steps */}
 
       <label>
         Title:
