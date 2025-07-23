@@ -8,7 +8,7 @@ import { Link } from "react-router";
       <ul className="flex space-x-6 text-gray-700 font-medium" >
         <li><Link to="/"className="hover:text-blue-500 transition" >Home</Link></li>
         <li><Link to="/listings" className="hover:text-blue-500 transition" >Listing</Link></li>
-        <li><Link to="/ add" className="hover:text-blue-500 transition" >Add Apartment</Link></li>
+        <li><Link to="/add" className="hover:text-blue-500 transition" >Add Apartment</Link></li>
       </ul>
     </nav>
   )

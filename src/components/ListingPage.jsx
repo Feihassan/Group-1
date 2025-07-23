@@ -30,6 +30,7 @@ function ListingPage() {
   }
 
   return (
+
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
         All Apartments
@@ -44,6 +45,7 @@ function ListingPage() {
           />
         ))}
       </div>
+
     </div>
   );
 }
