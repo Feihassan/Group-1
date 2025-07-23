@@ -6,9 +6,9 @@ import { Link } from "react-router";
     <nav>
       <h1>Dream ApartMent Finder</h1>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><Link></Link></li>
+        <li><Link></Link></li>
+        <li><Link></Link></li>
       </ul>
     </nav>
   )
