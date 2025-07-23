@@ -10,7 +10,7 @@ function App() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/apartments')
+    fetch('http://localhost:3000/apartments')
       .then(res => res.json())
       .then(data => setApartments(data));
   }, []);
