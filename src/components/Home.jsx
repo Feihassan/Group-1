@@ -15,10 +15,12 @@ export default function Home() {
       <h1 className="text-4xl font-bold text-center text-blue-900 mb-6">
         Welcome to Dream Apartment Finder
       </h1>
-      <p className="text-lg leading-relaxed text-justify mb-6">
-        
-        Browse verified listings, filter by location, and find your next home.
+      <p className="text-lg leading-relaxed text-justify space-y-2">
+      Welcome to <strong className="text-blue-600 font-semibold">Dream Apartment Finder</strong>—your one‑stop solution for discovering apartments that match your lifestyle and budget.<br/>
+      Simply enter a city or ZIP code to explore listings complete with <strong>vivid photos</strong>, current rents, and exact locations.<br/><br/>
+       Our platform makes comparison easy so you can focus on finding a place that <strong>feels like home.</strong>
       </p>
+
       <form
         onSubmit={submitSearch}
         className="flex flex-col sm:flex-row items-center justify-center gap-2"
@@ -35,6 +37,7 @@ export default function Home() {
           className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded sm:rounded-r-md hover:bg-blue-700"
         >
           Search
+          
         </button>
       </form>
     </div>

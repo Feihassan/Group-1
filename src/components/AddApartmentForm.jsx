@@ -28,7 +28,7 @@ function AddApartmentForm() {
       booked: false
     };
 
-    fetch("http://localhost:3001/apartments", {
+    fetch("https://json-server-backend-dvxy.onrender.com/apartments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newApartment)
