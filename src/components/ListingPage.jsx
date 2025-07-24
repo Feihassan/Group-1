@@ -4,13 +4,15 @@ import ApartmentCard from "./ApartmentCard";
 function ListingPage() {
   const [apartments, setApartments] = useState([]);
 
+  // fetch apartments from server when page loads
   useEffect(() => {
     fetch("http://localhost:3001/apartments")
       .then((res) => res.json())
       .then((data) => setApartments(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error("Error fetching apartments:", err));
   }, []);
 
+  // handle booking an apartment
   function handleBook(id) {
     fetch(`http://localhost:3001/apartments/${id}`, {
       method: "PATCH",
@@ -23,17 +25,27 @@ function ListingPage() {
           apt.id === updated.id ? updated : apt
         );
         setApartments(updatedList);
-      });
+      })
+      .catch((err) => console.error("Error booking apartment:", err));
   }
 
   return (
-    <div>
-      <h2>All Apartments</h2>
-      <div className="flex flex-wrap gap-4">
+
+    <div className="max-w-7xl mx-auto p-6">
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        All Apartments
+      </h2>
+
+      <div className="flex flex-wrap justify-center gap-6">
         {apartments.map((apt) => (
-          <ApartmentCard key={apt.id} apartment={apt} onBook={handleBook} />
+          <ApartmentCard
+            key={apt.id}
+            apartment={apt}
+            onBook={handleBook}
+          />
         ))}
       </div>
+
     </div>
   );
 }
