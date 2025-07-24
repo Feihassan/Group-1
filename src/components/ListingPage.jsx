@@ -12,7 +12,7 @@ function ListingPage() {
 
   // Fetch apartments once when component mounts or searchQuery changes
   useEffect(() => {
-    fetch("http://localhost:3001/apartments")
+    fetch("https://json-server-backend-dvxy.onrender.com/apartments")
       .then((res) => res.json())
       .then((data) => {
         // If there's a search query, filter apartments based on location
@@ -26,7 +26,7 @@ function ListingPage() {
 
   // When user clicks "Book", update backend and update UI without page reload
   function handleBook(id) {
-    fetch(`http://localhost:3001/apartments/${id}`, {
+    fetch(`https://json-server-backend-dvxy.onrender.com/apartments/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ booked: true })
