@@ -35,6 +35,7 @@ export default function Home() {
           className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded sm:rounded-r-md hover:bg-blue-700"
         >
           Search
+          
         </button>
       </form>
     </div>
