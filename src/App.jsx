@@ -4,11 +4,13 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import ListingPage from './components/ListingPage';
 import AddApartmentForm from './components/AddApartmentForm';
+import './index.css';
 
 function App() {
   const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
+
     fetch('http://localhost:3001/apartments')
       .then(res => res.json())
       .then(data => setApartments(data));
