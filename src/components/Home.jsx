@@ -16,6 +16,16 @@ function Home(){
        Say goodbye to stressful apartment hunting.<br/>
        Let us simplify your search and connect you to spaces where comfort meets convenience.
       </p>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+        <input
+          type="text"
+          placeholder="City or ZIP code"
+          className="w-full sm:w-2/3 p-2 border border-gray-300 rounded sm:rounded-l-md focus:outline-none"
+        />
+        <button className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded sm:rounded-r-md hover:bg-blue-700">
+          Search
+        </button>
+      </div>
 
     </div>
 
