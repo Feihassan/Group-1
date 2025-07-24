@@ -1,36 +1,46 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Home(){
+export default function Home() {
+  const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+
+  const submitSearch = (e) => {
+    e.preventDefault();
+    navigate(`/listings?search=${encodeURIComponent(query)}`);
+  };
 
   return (
     <div className="bg-blue-50 p-8 rounded-2xl shadow-md max-w-3xl mx-auto text-gray-800 font-sans">
       <h1 className="text-4xl font-bold text-center text-blue-900 mb-6">
-    Welcome to Dream Apartment Finder
-  </h1>
-      <p className="text-lg leading-relaxed text-justify">
-        Discover your ideal apartment with ease.<br/>
-        Whether you,re relocating, upgrading your lifestyle, or simply exploring new neighborhoods-<br/>
-       <strong className="text-blue-600 font-semibold">Dream Apartment Finder</strong> helps you find a place that truly feels like home.<br /><br />
-       Browse verified listings, filter by price, size, amenities or location<br/>
-       and save your favorites for later comparison.<br/>
-       You can even track updates in real time , so you'll never miss a new opportunity.<br/><br/>
-       Say goodbye to stressful apartment hunting.<br/>
-       Let us simplify your search and connect you to spaces where comfort meets convenience.
+        Welcome to Dream Apartment Finder
+      </h1>
+      <p className="text-lg leading-relaxed text-justify mb-6">
+        
+        Browse verified listings, filter by location, and find your next home.
       </p>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+      <form
+        onSubmit={submitSearch}
+        className="flex flex-col sm:flex-row items-center justify-center gap-2"
+      >
         <input
           type="text"
           placeholder="City or ZIP code"
-          className="w-full sm:w-2/3 p-2 border border-gray-300 rounded sm:rounded-l-md focus:outline-none"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="w-full sm:w-2/3 p-2 border rounded sm:rounded-l-md focus:outline-none"
         />
-        <button className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded sm:rounded-r-md hover:bg-blue-700">
+        <button
+          type="submit"
+          className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded sm:rounded-r-md hover:bg-blue-700"
+        >
           Search
+          
         </button>
-      </div>
-
+      </form>
     </div>
-
-  )
+  );
 }
 
-export default Home;
 
+  
