@@ -1,18 +1,75 @@
-import { Link } from "react-router";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
- function NavBar(){
+function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
+  const links = [
+    { path: '/', label: 'Home' },
+    { path: '/listings', label: 'Listings' },
+    { path: '/add', label: 'Add Apartment' },
+  ];
 
   return (
-    <nav className="bg-white shadow-md p-4 flex items-center justify-between" >
-      <h1 className="text-2xl font-bold text-blue-600">Dream ApartMent Finder</h1>
-      <ul className="flex space-x-6 text-gray-700 font-medium" >
-        <li><Link to="/"className="hover:text-blue-500 transition" >Home</Link></li>
-        <li><Link to="/listings" className="hover:text-blue-500 transition" >Listing</Link></li>
-        <li><Link to="/ add" className="hover:text-blue-500 transition" >Add Apartment</Link></li>
-      </ul>
+    <nav className="bg-white shadow p-4">
+      <div className="flex items-center justify-between">
+        
+        <h1 className="text-2xl font-bold text-blue-600">
+          Dream Apartment Finder
+        </h1>
+
+        
+        <button
+          className="sm:hidden focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? '✕' : '☰'}
+        </button>
+
+    
+        <ul className="hidden sm:flex space-x-6">
+          {links.map((link) => (
+            <li key={link.path}>
+              <Link
+                to={link.path}
+                className="hover:text-blue-500 transition"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      
+      {menuOpen && (
+        <ul className="sm:hidden mt-4 space-y-2">
+          {links.map((link) => (
+            <li key={link.path}>
+              <Link
+                to={link.path}
+                onClick={handleLinkClick}
+                className="block hover:text-blue-500 transition"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
-  )
+  );
+}
 
- }
-
- export default NavBar;
+export default NavBar;
