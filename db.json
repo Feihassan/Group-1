@@ -1,4 +1,4 @@
- {
+{
   "apartments": [
     {
       "id": "1",
@@ -21,7 +21,7 @@
       "title": "Modern 1BR in Nairobi",
       "price": 50000,
       "location": "Westlands",
-      "image": "https://media.istockphoto.com/id/2093684613/photo/virtual-design-of-elegant-living-room-with-nature-view.webp?a=1&b=1&s=612x612&w=0&k=20&c=dYxj9mAPAr9mDmLE99AqVihO5nH3487GwbO6jupqVsw=",
+      "image": "https://media.istockphoto.com/id/2093684613/photo/virtual-design-of-elegant-living-room-with-nature-view.webp",
       "description": "The best to be",
       "booked": true
     },
@@ -30,7 +30,7 @@
       "title": "Studio Apartment in Kilimani",
       "price": 45000,
       "location": "Kilimani",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUX...",
+      "image": "/images/studio-kilimani.jpg",
       "description": "Best studio apartment",
       "booked": true
     },
@@ -39,7 +39,7 @@
       "title": "Luxury Penthouse",
       "price": 150000,
       "location": "Lavington",
-      "image": "https://images.unsplash.com/photo-1600585154000-71d0b8f97b20",
+      "image": "/images/luxury-penthouse.jpg",
       "description": "Breathtaking views and high-end finishes",
       "booked": false
     },
@@ -48,144 +48,99 @@
       "title": "Cozy Bedsitter",
       "price": 25000,
       "location": "South B",
-      "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-      "description": "Compact and affordable",
+      "image": "/images/cozy-bedsitter.jpg",
+      "description": "Affordable and convenient",
       "booked": false
     },
     {
       "id": "5",
-      "title": "Charming 1BR in Ngong",
-      "price": 30000,
-      "location": "Ngong",
-      "image": "https://images.unsplash.com/photo-1600585154030-01e00e2e9bd6",
-      "description": "Perfect for singles or couples",
+      "title": "Elegant 3BR Apartment",
+      "price": 85000,
+      "location": "Kileleshwa",
+      "image": "https://images.unsplash.com/photo-1598928506311-c55ded91a20d",
+      "description": "Spacious and stylish with modern finishes",
       "booked": false
     },
     {
       "id": "6",
-      "title": "Fully Furnished Studio",
-      "price": 40000,
-      "location": "Kileleshwa",
-      "image": "https://images.unsplash.com/photo-1600585154210-62b055032fdd",
-      "description": "Move-in ready with modern decor",
+      "title": "Compact Studio in CBD",
+      "price": 30000,
+      "location": "CBD",
+      "image": "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
+      "description": "Perfect for single working professionals",
       "booked": true
     },
     {
       "id": "7",
-      "title": "Spacious 3BR",
-      "price": 75000,
-      "location": "Rongai",
-      "image": "https://images.unsplash.com/photo-1600585154700-2bd1c273fdcb",
-      "description": "Family-friendly neighborhood",
+      "title": "Furnished 1BR in Parklands",
+      "price": 60000,
+      "location": "Parklands",
+      "image": "https://images.unsplash.com/photo-1600585154780-100e8bfc8c20",
+      "description": "Fully furnished and move-in ready",
       "booked": false
     },
     {
       "id": "8",
-      "title": "Elegant 2BR",
-      "price": 68000,
-      "location": "Kasarani",
-      "image": "https://images.unsplash.com/photo-1600585154880-cf031a0a4b6d",
-      "description": "Modern apartment with balcony",
-      "booked": false
+      "title": "Spacious 2BR in South C",
+      "price": 55000,
+      "location": "South C",
+      "image": "https://images.unsplash.com/photo-1592595896551-12a0292fbb9e",
+      "description": "Ideal for small families",
+      "booked": true
     },
     {
       "id": "9",
-      "title": "Budget 1BR",
-      "price": 28000,
-      "location": "Uthiru",
-      "image": "https://images.unsplash.com/photo-1600585154988-823ea31fbc34",
-      "description": "Affordable and well located",
+      "title": "Modern Bedsitter",
+      "price": 20000,
+      "location": "Pipeline",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      "description": "Affordable bedsitter with secure entry",
       "booked": false
     },
     {
       "id": "10",
-      "title": "Stylish Loft",
-      "price": 72000,
-      "location": "Upper Hill",
-      "image": "https://images.unsplash.com/photo-1600585155123-7a6574de449c",
-      "description": "Trendy and high ceiling",
+      "title": "1BR with Balcony",
+      "price": 48000,
+      "location": "Kasarani",
+      "image": "https://images.unsplash.com/photo-1560448070-c28ad858b5f2",
+      "description": "Scenic views and open layout",
       "booked": true
     },
     {
       "id": "11",
-      "title": "2BR with Garden",
-      "price": 60000,
+      "title": "Luxury 4BR Mansionette",
+      "price": 200000,
       "location": "Karen",
-      "image": "https://images.unsplash.com/photo-1600585155400-b7eac6e84c19",
-      "description": "Private garden space",
+      "image": "https://images.unsplash.com/photo-1600585154963-84f509ad5366",
+      "description": "Private garden and garage, great for families",
       "booked": false
     },
     {
       "id": "12",
-      "title": "Modern Bedsitter",
-      "price": 22000,
-      "location": "Donholm",
-      "image": "https://images.unsplash.com/photo-1600585155777-9f9d4c7e236e",
-      "description": "Clean and minimalist",
-      "booked": false
+      "title": "1BR with Rooftop Access",
+      "price": 52000,
+      "location": "Ngong Road",
+      "image": "https://images.unsplash.com/photo-1615873968403-89d6bb26c1d5",
+      "description": "Chic modern finishes and rooftop lounge",
+      "booked": true
     },
     {
       "id": "13",
-      "title": "Furnished 1BR in CBD",
-      "price": 50000,
-      "location": "CBD",
-      "image": "https://images.unsplash.com/photo-1600585156000-5189d25f6ce3",
-      "description": "Ideal for remote workers",
+      "title": "Affordable Bedsitter",
+      "price": 18000,
+      "location": "Githurai",
+      "image": "https://images.unsplash.com/photo-1600585154720-bd1c8eebd4f7",
+      "description": "Budget-friendly with all essentials",
       "booked": false
     },
     {
       "id": "14",
-      "title": "Scenic Apartment",
+      "title": "2BR Apartment with Gym",
       "price": 70000,
-      "location": "Gigiri",
-      "image": "https://images.unsplash.com/photo-1600585156234-05f4d9c2212d",
-      "description": "Great nature views",
-      "booked": true
-    },
-    {
-      "id": "15",
-      "title": "Shared 2BR",
-      "price": 35000,
-      "location": "Ruaka",
-      "image": "https://images.unsplash.com/photo-1600585156350-b1b4e62e6b27",
-      "description": "Affordable shared space",
+      "location": "Kilimani",
+      "image": "https://images.unsplash.com/photo-1586023492055-3b3f84efc27c",
+      "description": "Access to gym, pool, and security",
       "booked": false
-    },
-    {
-      "id": "16",
-      "title": "Executive Suite",
-      "price": 95000,
-      "location": "Westlands",
-      "image": "https://images.unsplash.com/photo-1600585156477-02c70e93c46d",
-      "description": "For business professionals",
-      "booked": true
-    },
-    {
-      "id": "17",
-      "title": "Quiet 1BR",
-      "price": 32000,
-      "location": "Embakasi",
-      "image": "https://images.unsplash.com/photo-1600585156600-a73217c9d708",
-      "description": "Peaceful environment",
-      "booked": false
-    },
-    {
-      "id": "18",
-      "title": "Urban Apartment",
-      "price": 58000,
-      "location": "Lang’ata",
-      "image": "https://images.unsplash.com/photo-1600585156722-0598c531b6f3",
-      "description": "Close to public transport",
-      "booked": false
-    },
-    {
-      "id": "19",
-      "title": "Minimalist Studio",
-      "price": 39000,
-      "location": "Parklands",
-      "image": "https://images.unsplash.com/photo-1600585156851-54838aefc6e5",
-      "description": "Simple and functional",
-      "booked": true
     }
   ]
 }
