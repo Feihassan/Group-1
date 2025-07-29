@@ -9,20 +9,31 @@ function ApartmentCard({ apartment, onBook }) {
   }
 
   return (
-    <div className="border rounded-lg p-4 shadow-md w-full max-w-md mx-auto mb-6 bg-white">
-      <img src={image} alt={title} className="w-full h-64 object-cover rounded-md mb-4" />
-      <h2 className="text-xl font-semibold">{title}</h2>
-      <p className="text-gray-600">{location}</p>
-      <p className="text-green-600 font-bold">KES {price}</p>
-      <button
-        onClick={handleClick}
-        disabled={booked}
-        className={`mt-3 px-4 py-2 rounded ${
-          booked ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
-        } text-white`}
-      >
-        {booked ? "Booked" : "Book Apartment"}
-      </button>
+    <div className="bg-white shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-[1.02] w-full max-w-md mx-auto mb-8">
+      <img
+        src={image}
+        alt={title || "Apartment image"}
+        className="w-full h-64 object-cover"
+      />
+      <div className="p-5">
+        <h2 className="text-2xl font-semibold text-gray-800">{title}</h2>
+        <p className="text-sm text-gray-500 mt-1">{location}</p>
+        <p className="text-lg text-green-600 font-bold mt-2">KES {price.toLocaleString()}</p>
+
+        <button
+          onClick={handleClick}
+          disabled={booked}
+          aria-label={booked ? "Apartment already booked" : "Book this apartment"}
+          className={`mt-4 w-full py-2 px-4 rounded-md text-white font-medium transition-colors duration-300
+            ${
+              booked
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            }`}
+        >
+          {booked ? "Booked" : "Book Apartment"}
+        </button>
+      </div>
     </div>
   );
 }
